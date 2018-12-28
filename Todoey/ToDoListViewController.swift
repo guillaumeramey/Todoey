@@ -10,13 +10,13 @@ import UIKit
 
 class ToDoListViewController: UITableViewController {
 
-    let itemArray = ["Guinness", "Chimay bleue", "Duvel"]
+    var itemArray = ["Guinness", "Chimay bleue", "Duvel"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
+    // MARK: - Datasource methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
     }
@@ -29,6 +29,7 @@ class ToDoListViewController: UITableViewController {
         return cell
     }
 
+    // MARK: - Delegate methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
@@ -37,6 +38,27 @@ class ToDoListViewController: UITableViewController {
         } else {
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         }
+    }
+
+    // MARK: - Actions
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
+        let actionAdd = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            self.itemArray.append(textField.text!)
+            self.tableView.reloadData()
+        }
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Enter new item"
+            textField = alertTextField
+        }
+        alert.addAction(actionAdd)
+        alert.addAction(actionCancel)
+
+        present(alert, animated: true, completion: nil)
     }
 }
 
