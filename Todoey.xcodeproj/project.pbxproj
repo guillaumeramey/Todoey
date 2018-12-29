@@ -12,6 +12,7 @@
 		A48BADFE21D643F5008BAF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48BADFC21D643F5008BAF09 /* Main.storyboard */; };
 		A48BAE0021D643F7008BAF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48BADFF21D643F7008BAF09 /* Assets.xcassets */; };
 		A48BAE0321D643F7008BAF09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48BAE0121D643F7008BAF09 /* LaunchScreen.storyboard */; };
+		A48BAE0B21D72E83008BAF09 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48BAE0A21D72E83008BAF09 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A48BADFF21D643F7008BAF09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A48BAE0221D643F7008BAF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A48BAE0421D643F7008BAF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A48BAE0A21D72E83008BAF09 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		A48BADF721D643F5008BAF09 /* Todoey */ = {
 			isa = PBXGroup;
 			children = (
-				A48BADF821D643F5008BAF09 /* AppDelegate.swift */,
-				A48BADFA21D643F5008BAF09 /* ToDoListViewController.swift */,
-				A48BADFC21D643F5008BAF09 /* Main.storyboard */,
-				A48BADFF21D643F7008BAF09 /* Assets.xcassets */,
-				A48BAE0121D643F7008BAF09 /* LaunchScreen.storyboard */,
-				A48BAE0421D643F7008BAF09 /* Info.plist */,
+				A48BAE0F21D749F1008BAF09 /* Supporting files */,
+				A48BAE0C21D749C2008BAF09 /* Controller */,
+				A48BAE0D21D749D5008BAF09 /* View */,
+				A48BAE0E21D749DE008BAF09 /* Model */,
 			);
 			path = Todoey;
+			sourceTree = "<group>";
+		};
+		A48BAE0C21D749C2008BAF09 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A48BADFA21D643F5008BAF09 /* ToDoListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A48BAE0D21D749D5008BAF09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A48BADFC21D643F5008BAF09 /* Main.storyboard */,
+				A48BAE0121D643F7008BAF09 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A48BAE0E21D749DE008BAF09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A48BAE0A21D72E83008BAF09 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A48BAE0F21D749F1008BAF09 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				A48BAE0421D643F7008BAF09 /* Info.plist */,
+				A48BADF821D643F5008BAF09 /* AppDelegate.swift */,
+				A48BADFF21D643F7008BAF09 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A48BADFB21D643F5008BAF09 /* ToDoListViewController.swift in Sources */,
+				A48BAE0B21D72E83008BAF09 /* Item.swift in Sources */,
 				A48BADF921D643F5008BAF09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A53F8H373H;
-				INFOPLIST_FILE = Todoey/Info.plist;
+				INFOPLIST_FILE = "Todoey/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A53F8H373H;
-				INFOPLIST_FILE = Todoey/Info.plist;
+				INFOPLIST_FILE = "Todoey/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
